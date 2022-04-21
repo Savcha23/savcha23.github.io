@@ -1,0 +1,142 @@
+/*Автоматическое форматирование кода в Visual Studio Code выполняется следующими комбинациями: Shift + Alt + F*/
+
+body {
+    background-color: rgb(221, 221, 221);
+
+}
+
+.center {
+    text-align: center;
+}
+
+.test {
+    width: 90%;
+    height: 350px;
+    border: #2D6B9F solid 3px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.test1 {
+    width: 90%;
+    height: 350px;
+    border: #2D6B9F solid 3px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: whitesmoke;
+}
+
+.test3 {
+    width: 95%;
+    height: 350px;
+    border: #2D6B9F solid 3px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: whitesmoke;
+}
+
+.header {
+    background-color: whitesmoke;
+}
+
+.logo {
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+
+.menu {
+    padding-top: 2em;
+}
+
+li {
+    list-style-type: none;
+    /* Убираем маркеры */
+}
+
+ul {
+    padding-left: 0;
+    /* Сдвигаем список влево */
+}
+
+.photo {
+    margin-top: 1em;
+    padding: 5% 0;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.main_photo {
+    width: 80%;
+    border-radius: 8px;
+}
+
+.btn_photo {
+    display: inline-flex;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 12px 50px;
+    border-radius: 10px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #337AB7;
+    cursor: pointer;
+    border: 2px solid #BFE2FF;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn_photo:hover,
+.btn_photo:active,
+.btn_photo:focus {
+    color: #FFF;
+}
+
+.btn_photo:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #2D6B9F;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+
+.btn_photo:hover:before,
+.btn_photo:active:before,
+.btn_photo:focus:before {
+    transform: translateX(0);
+}
+
+.main_info {
+    margin-top: 1em;
+    padding: 5% 0;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+/* на sm */
+@media (min-width: 768px) {}
+
+/* на md */
+@media (min-width: 992px) {}
+
+/* на lg */
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 1340px;
+    }
+
+
+}
