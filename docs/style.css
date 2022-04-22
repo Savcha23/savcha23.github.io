@@ -3,7 +3,6 @@
 body {
     background-color: #ebedf0;
     color: #2d81e0;
-
 }
 
 .center {
@@ -61,22 +60,17 @@ body {
     color: #2d81e0;
 }
 
-.s_icon {
-    padding-left: 1%;
-}
-
 .box_search {
     display: inline-block;
     background-color: #ebedf0;
     font-size: 1.4rem;
-    margin: 2%;
+    margin-top: 8%;
     border-radius: 10px;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding: 0 3%;
 }
 
 .searchbar {
-    width: 15rem;
+    width: 13rem;
     height: 1.5rem;
     border: none;
     outline: none;
@@ -87,46 +81,56 @@ body {
 }
 
 .searchbar:hover {
-    width: 20rem;
+    width: 15rem;
     height: 1.5rem;
 }
 
-.box_music{
-    display: inline-block;
+.box_music {
     background-color: #ebedf0;
-    font-size: 1.4rem;
-    margin: 2%;    
+    font-size: 1.5rem;
     border-radius: 10px;
-    padding-left: 3%;
-    padding-right: 3%;
-    width: 90%;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    margin: 10px;
 }
 
-.col-lg-2{
-    padding-top: 5px;
-    padding-bottom: 5px;
+.music_logo {
+    margin: 0 5px;
+    margin-right: 3%;
 }
 
-.btn_box{
-    position: relative;
-    top: 10%;    
+.btn_box {
+    margin: 0 5px;
 }
 
-.btn_player{
+.btn_player {
     border: none;
-    background-color: #ebedf0;
     color: #2d81e0;
 }
 
-.name_music{
-    position: relative;
-    top: 10%;
+.name_music {
+    margin: 0 5px;
+}
+
+.name_m {
     margin: 0;
 }
 
-.menu {
-    padding-top: 2em;
+.navbar{
+    padding: 0;
+    padding-top: 8%;
+}
+
+.nav-item{
+    color: #2d81e0;
     font-size: 1.3rem;
+    padding: 0 5px;
+}
+
+.nav-item:hover {
+    background-color: #cacaca;
+    border-radius: 10px;
 }
 
 li {
@@ -184,7 +188,7 @@ ul {
     bottom: 0;
     left: 0;
     border-right: 50px solid transparent;
-    border-top: 50px solid #3b7eb6;
+    border-top: 50px solid rgb(56, 119, 170);
     transition: transform 0.5s;
     transform: translateX(-100%);
     z-index: -1;
@@ -204,7 +208,35 @@ ul {
 }
 
 /* на sm */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .navbar-container {
+        position: sticky;
+        top: 0;
+        overflow-y: auto;
+        height: 100vh;
+    }
+
+    .navbar-container .navbar {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .navbar-container .navbar-collapse {
+        align-items: flex-start;
+    }
+
+    .navbar-container .nav {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-container .navbar-nav {
+        flex-direction: column !important;
+    }
+}
 
 /* на md */
 @media (min-width: 992px) {}
