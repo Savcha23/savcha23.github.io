@@ -1,8 +1,8 @@
 /*Автоматическое форматирование кода в Visual Studio Code выполняется следующими комбинациями: Shift + Alt + F*/
 
 body {
-    background-color: rgb(228, 228, 228);
-    color: #1d69a7;
+    background-color: #ebedf0;
+    color: #2d81e0;
 
 }
 
@@ -13,31 +13,32 @@ body {
 .test {
     width: 90%;
     height: 350px;
-    border: #2D6B9F solid 3px;
+    border: #2d81e0 solid 3px;
     border-radius: 10px;
     margin: 0 auto;
+    background-color: #ffffff;
 }
 
 .test1 {
     width: 90%;
     height: 350px;
-    border: #2D6B9F solid 3px;
+    border: #2d81e0 solid 3px;
     border-radius: 10px;
     margin: 0 auto;
-    background-color: whitesmoke;
+    background-color: #ffffff;
 }
 
 .test3 {
     width: 95%;
     height: 350px;
-    border: #2D6B9F solid 3px;
+    border: #2d81e0 solid 3px;
     border-radius: 10px;
     margin: 0 auto;
-    background-color: whitesmoke;
+    background-color: #ffffff;
 }
 
 .header {
-    background-color: whitesmoke;
+    background-color: #ffffff;
 }
 
 .logo {
@@ -47,17 +48,17 @@ body {
     top: 50%;
     transform: translate(0, -50%);
     font-size: 25px;
-    color: #1d69a7;
+    color: #2d81e0;
 }
 
 .logo:hover {
     text-decoration: none;
-    color: #1d69a7;
+    color: #2d81e0;
 }
 
 .logo:visited {
     text-decoration: none;
-    color: #1d69a7;
+    color: #2d81e0;
 }
 
 .s_icon {
@@ -66,7 +67,7 @@ body {
 
 .box_search {
     display: inline-block;
-    background-color: rgb(221, 221, 221);
+    background-color: #ebedf0;
     font-size: 1.4rem;
     margin: 2%;
     border-radius: 10px;
@@ -82,7 +83,7 @@ body {
     transition: all 0.8s;
     transition-delay: 0.1s;
     padding-left: 3%;
-    background-color: rgb(221, 221, 221);
+    background-color: #ebedf0;
 }
 
 .searchbar:hover {
@@ -92,7 +93,7 @@ body {
 
 .box_music{
     display: inline-block;
-    background-color: rgb(221, 221, 221);
+    background-color: #ebedf0;
     font-size: 1.4rem;
     margin: 2%;    
     border-radius: 10px;
@@ -113,8 +114,8 @@ body {
 
 .btn_player{
     border: none;
-    background-color: rgb(221, 221, 221);
-    color: #1d69a7;
+    background-color: #ebedf0;
+    color: #2d81e0;
 }
 
 .name_music{
@@ -141,7 +142,7 @@ ul {
 .photo {
     margin-top: 1em;
     padding: 5% 0;
-    background-color: whitesmoke;
+    background-color: #ffffff;
     border-radius: 10px;
 }
 
@@ -162,7 +163,7 @@ ul {
     color: #FFF;
     font-weight: bold;
     text-transform: uppercase;
-    background: #337AB7;
+    background: #2d81e0;
     cursor: pointer;
     border: 2px solid #BFE2FF;
     overflow: hidden;
@@ -183,7 +184,7 @@ ul {
     bottom: 0;
     left: 0;
     border-right: 50px solid transparent;
-    border-top: 50px solid #2D6B9F;
+    border-top: 50px solid #3b7eb6;
     transition: transform 0.5s;
     transform: translateX(-100%);
     z-index: -1;
@@ -198,7 +199,7 @@ ul {
 .main_info {
     margin-top: 1em;
     padding: 5% 0;
-    background-color: whitesmoke;
+    background-color: #ffffff;
     border-radius: 10px;
 }
 
