@@ -9,6 +9,10 @@ body {
     text-align: center;
 }
 
+.hiden{
+    display: none;
+}
+
 .test {
     width: 90%;
     height: 350px;
@@ -87,17 +91,17 @@ body {
 
 .box_music {
     background-color: #ebedf0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 10px;
     height: 2.5em;
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .music_logo {
     margin: 0 5px;
-    margin-right: 3%;
+    font-size: 1.8rem;
 }
 
 .btn_box {
@@ -117,20 +121,9 @@ body {
     margin: 0;
 }
 
-.navbar{
-    padding: 0;
-    padding-top: 8%;
-}
-
-.nav-item{
-    color: #2d81e0;
-    font-size: 1.3rem;
-    padding: 0 5px;
-}
-
-.nav-item:hover {
-    background-color: #cacaca;
-    border-radius: 10px;
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
 }
 
 li {
@@ -144,7 +137,6 @@ ul {
 }
 
 .photo {
-    margin-top: 1em;
     padding: 5% 0;
     background-color: #ffffff;
     border-radius: 10px;
@@ -208,35 +200,115 @@ ul {
 }
 
 /* на sm */
-@media (min-width: 768px) {
-    .navbar-container {
-        position: sticky;
+@media (max-width: 1200px) {
+
+    /* стилизуем кнопку */
+    .menu__btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 26px;
+        height: 32px;
+        cursor: pointer;
+        z-index: 3;
+        transition: all .3s ease;
+    }
+    .menu__btn.out {
+        transform: translateY(-100%);
+    }
+
+    /* добавляем "гамбургер" */
+    .menu__btn>span,
+    .menu__btn>span::before,
+    .menu__btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+    }
+
+    .menu__btn>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn>span::after {
+        content: '';
+        top: 8px;
+    }
+
+    /* контейнер меню */
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
         top: 0;
-        overflow-y: auto;
-        height: 100vh;
-    }
-
-    .navbar-container .navbar {
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        flex-direction: column;
+        left: -100%;
+        width: 300px;
         height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        z-index: 2;
     }
 
-    .navbar-container .navbar-collapse {
-        align-items: flex-start;
+    /* элементы меню */
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
     }
 
-    .navbar-container .nav {
-        flex-direction: column;
-        flex-wrap: nowrap;
+    .menu__item:hover {
+        background-color: #CFD8DC;
     }
 
-    .navbar-container .navbar-nav {
-        flex-direction: column !important;
+    #menu__toggle:checked~.menu__btn>span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked~.menu__btn>span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked~.menu__btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked~.menu__box {
+        visibility: visible;
+        left: 0;
+    }
+
+    .menu__btn>span,
+    .menu__btn>span::before,
+    .menu__btn>span::after {
+        transition-duration: .25s;
+    }
+
+    .menu__box {
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        transition-duration: .25s;
+    }
+
+    .menu {
+        visibility: hidden;
     }
 }
+
+@media (min-width: 768px) {}
 
 /* на md */
 @media (min-width: 992px) {}
@@ -248,5 +320,30 @@ ul {
         max-width: 1340px;
     }
 
+    .box_music{
+        margin: 10px;
+        font-size: 1.5rem;
+    }
 
+    .music_logo{
+        font-size: 2.5rem;
+        margin-right: 3%;
+    }
+
+    /* скрываем гамбургер */
+    .hamburger-menu {
+        visibility: hidden;
+    }
+
+    .menu {
+        visibility: visible;
+    }
+
+    .photo{
+        margin-top: 1em;
+    }
+
+    .hiden{
+        display: block;
+    }
 }

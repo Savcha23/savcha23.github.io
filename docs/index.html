@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/5f1205df9b.js" crossorigin="anonymous"></script>
@@ -28,7 +29,7 @@
                 <div class="col-lg-7">
                     <div class="box_music">
                         <div class="music_logo">
-                            <i class="fa-solid fa-music" style="font-size: 2.5rem;"></i>
+                            <i class="fa-solid fa-music"></i>
                         </div>
                         <div class="btn_box">
                             <button class="btn_player"><i class="fa-solid fa-play"></i></button>
@@ -46,22 +47,27 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 navbar-container">
-                <nav class="navbar navbar-expand-lg ">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbar">
-                      <!-- Пункты вертикального меню -->
-                      <ul class="navbar-nav">
-                        <a class="nav-link" href="#"><li class="nav-item"><i class="fa-solid fa-id-badge"></i> Моя страничка</li></a>
-                        <a class="nav-link" href="#"><li class="nav-item"><i class="fa-solid fa-envelope"></i> Сообщения</li></a>
-                        <a class="nav-link" href="#"><li class="nav-item"><i class="fa-solid fa-radio"></i> Музыка</li></a>
-                        <a class="nav-link" href="#"><li class="nav-item"><i class="fa-solid fa-video"></i> Видео</li></a>
-                        <a class="nav-link" href="#"><li class="nav-item"><i class="fa-solid fa-camera"></i> Фотографии</li></a>
-                      </ul>
-                    </div>
-                  </nav>
+            <div class="col-lg-2">
+                <ul class="menu hiden">
+                    <a href="#" class="menu__elem"><li><i class="fa-solid fa-id-badge"></i> Моя страничка</li></a>
+                    <a href="#" class="menu__elem"><li><i class="fa-solid fa-envelope"></i> Сообщения</li></a>
+                    <a href="#" class="menu__elem"><li><i class="fa-solid fa-radio"></i> Музыка</li></a>
+                    <a href="#" class="menu__elem"><li><i class="fa-solid fa-video"></i> Видео</li></a>
+                    <a href="#" class="menu__elem"><li><i class="fa-solid fa-camera"></i> Фотографии</li></a>
+                </ul>
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <a href="#" class="menu__item"><li><i class="fa-solid fa-id-badge"></i> Моя страничка</li></a>
+                        <a href="#" class="menu__item"><li><i class="fa-solid fa-envelope"></i> Сообщения</li></a>
+                        <a href="#" class="menu__item"><li><i class="fa-solid fa-radio"></i> Музыка</li></a>
+                        <a href="#" class="menu__item"><li><i class="fa-solid fa-video"></i> Видео</li></a>
+                        <a href="#" class="menu__item"><li><i class="fa-solid fa-camera"></i> Фотографии</li></a>
+                    </ul>
+                  </div>
             </div>
             <div class="col-lg-3">
                 <div class="photo center">
@@ -97,7 +103,7 @@
         </div>
     </div>
     </div>
-
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>
