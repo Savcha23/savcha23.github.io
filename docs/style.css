@@ -190,6 +190,7 @@ ul {
 .btn_photo:active,
 .btn_photo:focus {
     color: #FFF;
+    outline: none;
 }
 
 .btn_photo:before {
