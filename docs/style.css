@@ -65,28 +65,22 @@ body {
 }
 
 .box_search {
-    display: inline-block;
     background-color: #ebedf0;
-    font-size: 1.4rem;
-    margin-top: 8%;
+    font-size: 1.2rem;
     border-radius: 10px;
-    padding: 0 3%;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding-left: 3%;
 }
 
 .searchbar {
-    width: 13rem;
-    height: 1.5rem;
+    margin-left: 3%;
     border: none;
-    outline: none;
-    transition: all 0.8s;
-    transition-delay: 0.1s;
-    padding-left: 3%;
+    outline:none;
     background-color: #ebedf0;
-}
-
-.searchbar:hover {
-    width: 15rem;
-    height: 1.5rem;
+    width: 100%;
 }
 
 .box_music {
@@ -113,6 +107,12 @@ body {
     color: #2d81e0;
 }
 
+.btn_player, 
+.btn_player:active, 
+.btn_player:focus {
+    outline: none;
+}
+
 .name_music {
     margin: 0 5px;
 }
@@ -126,22 +126,22 @@ body {
     opacity: 0;
 }
 
-.menu{
+.menu {
     margin-top: 5%;
 }
 
-.menu__elem{
+.menu__elem {
     color: #2d81e0;
     font-size: 1.3rem;
     text-decoration: none;
 }
 
-.menu__elem:hover{
+.menu__elem:hover {
     color: #2d81e0;
     text-decoration: none;
 }
 
-.menu__elem li:hover{
+.menu__elem li:hover {
     background-color: #cccc;
     border-radius: 10px;
 }
@@ -222,12 +222,9 @@ ul {
 /* на sm */
 @media (max-width: 1200px) {
 
-    .logo{
-        text-align: center;;
-    }
-
-    .box_search{
-        margin-top: 0;
+    .logo {
+        text-align: center;
+        font-size: 35px;
     }
 
     /* стилизуем кнопку */
@@ -341,13 +338,26 @@ ul {
 @media (min-width: 768px) {}
 
 /* на md */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+
+    .logo{
+        font-size: 24px;
+    }
+
+    .photo {
+        margin-top: 1em;
+    }
+}
 
 /* на lg */
 @media (min-width: 1200px) {
 
     .container {
         max-width: 1340px;
+    }
+
+    .box_search{
+        margin-top: 5%;
     }
 
     .box_music {
