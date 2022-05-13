@@ -3,13 +3,36 @@ var header = $('.menu__btn'),
 
 $(window).scroll(function() {
 	var scrolled = $(window).scrollTop();
- 
 	if ( scrolled > 24 && scrolled > scrollPrev ) {
 		header.addClass('out');
 	} else {
 		header.removeClass('out');
 	}
-	scrollPrev = scrolled;
+	scrollPrev = scrolled;	
+});
+
+$(document).ready(function(){
+	// прячем кнопку #back-top
+	$("#back-top").hide();
+
+	// появление/затухание кнопки #back-top
+	$(function (){
+		$(window).scroll(function (){
+			if ($(this).scrollTop() > 100){
+				$('#back-top').fadeIn();
+			} else{
+				$('#back-top').fadeOut();
+			}
+		});
+
+		// при клике на ссылку плавно поднимаемся вверх
+		$('#back-top a').click(function (){
+			$('body,html').animate({
+				scrollTop:0
+			}, 800);
+			return false;
+		});
+	});
 });
 
 document.getElementById('player_pause').hidden = true;
