@@ -35,6 +35,24 @@ $(document).ready(function(){
 	});
 });
 
+function setBg(){
+    $('#back-top').fadeOut();
+}
+function scroll(){
+    if(scroll.scrolling){
+        clearTimeout(scroll.timer);
+    } else {
+        scroll.scrolling = true;
+    }
+    scroll.timer = setTimeout(scrollStop, 1500);
+}
+function scrollStop(){
+    setBg();
+    scroll.scrolling = false;
+}
+document.body.onscroll = scroll;
+
+
 document.getElementById('player_pause').hidden = true;
 
 document.getElementById('player_play').onclick = function() {
