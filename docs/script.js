@@ -11,3 +11,17 @@ $(window).scroll(function() {
 	}
 	scrollPrev = scrolled;
 });
+
+document.getElementById('player_pause').hidden = true;
+
+document.getElementById('player_play').onclick = function() {
+	
+	document.getElementById('player_play').hidden = true;
+	document.getElementById('player_pause').hidden = false;
+  }
+
+  document.getElementById('player_pause').onclick = function() {
+	  
+	document.getElementById('player_play').hidden = false;
+	document.getElementById('player_pause').hidden = true;
+  }
